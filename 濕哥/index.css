@@ -1,0 +1,101 @@
+
+:root {
+	--background: #EDEEF7;
+	--gray: #EDEEF7;
+	--white: #FCFCFC;
+	--roboto: 'Roboto', sans-serif;
+	--robotoCondensed: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	font-family: var(--robotoCondensed), sans-serif;
+	font-size: 1rem;
+	background: black;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+#team-members {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin: auto;
+	padding: 24px;
+	max-width: 400px;
+	width: 100%;
+	background-color: var(- white);
+	border-radius: 32px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.team-member {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 16px;
+	min-height: 60px;
+	padding: 16px;
+	background-color: var(--white);
+	border-radius: 24px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0x 6px 24px 0px;
+	font-size: 16px;
+	z-index: 1;
+	
+	&:hover {
+		cursor: grab;
+	}
+	
+	&-avatar {
+		width: 3.75rem;
+		height: 3.75rem;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+	
+	&-name {
+		display: grid;
+		gap: 0.5rem;
+		
+		h3 {
+			font-size: 45-large;
+		}
+		p {
+			font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+	}
+	
+	&-chosen {
+		box-shadow: 8px 8px 32px var(--gray);
+	}
+	
+	&-drag {
+		opacity: 0.001; 
+	}
+}
+
+.social-links {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	margin-left: auto;
+	padding: 0;
+	list-style-type: none;
+	
+	i {
+		width: 1.25rem;
+		height: 1.25rem;
+		font-size: 1.25rem;
+	}
+}
